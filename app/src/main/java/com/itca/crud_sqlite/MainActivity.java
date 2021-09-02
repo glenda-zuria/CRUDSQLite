@@ -17,11 +17,16 @@ import com.itca.crud_sqlite.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private EditText et_codigo,et_descripcion, et_precio;
+    private Button btnAlta, btnConsultar1, btnConsultar2, btnEliminar, btnActualizar,btnNuevo,btnSalir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
         /*NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);*/
+        et_codigo=findViewById(R.id.et_codigo);
+        et_descripcion=findViewById(R.id.et_descripcion);
+        et_precio=findViewById(R.id.et_precio);
+        btnAlta=findViewById(R.id.btnAlta);
+        btnConsultar1=findViewById(R.id.btnConsultar1);
+        btnConsultar2=findViewById(R.id.btnConsultar2);
+        btnEliminar=findViewById(R.id.btnEliminar);
+        btnActualizar =findViewById(R.id.btnActualizar);
+        btnNuevo=findViewById(R.id.btnNuevo);
+        btnSalir=findViewById(R.id.btnSalir);
+
+
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +85,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnAlta:
+                Toast.makeText(this, "Has hecho clic en el boton btnAlta", Toast.LENGTH_SHORT).show();
+            case R.id.btnConsultar1:
+                Toast.makeText(this, "Has hecho clic en el boton btnConsultar1", Toast.LENGTH_SHORT).show();
+            case R.id.btnConsultar2:
+                Toast.makeText(this, "Has hecho clic en el boton btnConsultar2", Toast.LENGTH_SHORT).show();
+            case R.id.btnEliminar:
+                Toast.makeText(this, "Has hecho clic en el boton btnEliminar", Toast.LENGTH_SHORT).show();
+            case R.id.btnActualizar:
+                Toast.makeText(this, "Has hecho clic en el boton btnActualizar ", Toast.LENGTH_SHORT).show();
+            case R.id.btnNuevo:
+                Toast.makeText(this, "Has hecho clic en el boton btnNuevo", Toast.LENGTH_SHORT).show();
+            case R.id.btnSalir:
+                Toast.makeText(this, "Has hecho clic en el boton btnSalir", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                //break;
+
+        }
+    }
+
+    /*@Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
+    }*/
 }
