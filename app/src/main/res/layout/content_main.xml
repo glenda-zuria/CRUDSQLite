@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <fragment
+    <!--<fragment
         android:id="@+id/nav_host_fragment_content_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
@@ -15,5 +16,126 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:navGraph="@navigation/nav_graph" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="248dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/producto3" />
+
+    <EditText
+        android:id="@+id/et_codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Introduzca el codigo producto"
+        android:drawablePadding="5dp"
+        />
+    <EditText
+        android:id="@+id/et_demostracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Introduzca el codigo producto"
+        android:drawablePadding="5dp"
+        />
+    <EditText
+        android:id="@+id/et_producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Introduzca el codigo producto"
+        android:drawablePadding="5dp"
+        />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_marginTop="45dp">
+       <Button
+           android:id="@+id/bthAlta"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Guardar"
+           android:layout_marginRight="5dp"
+           android:textStyle="bold"/>
+       <Button
+           android:id="@+id/bthConsultar1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Consulta por Codigo"
+           android:layout_marginRight="5dp"
+           android:textStyle="bold"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/bthConsultar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consultar por Descripcion"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/bthEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/bthActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/bthNuevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/bthSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
